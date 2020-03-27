@@ -5,7 +5,6 @@ import gl51.movie.service.MovieRegistry
 
 import javax.inject.Singleton
 
-// Shift + ctl + T => créer un test
 @Singleton
 class MovieRegistryImpl implements MovieRegistry {
 
