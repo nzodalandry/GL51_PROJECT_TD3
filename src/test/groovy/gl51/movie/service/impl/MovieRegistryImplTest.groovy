@@ -1,5 +1,6 @@
 package gl51.movie.service.impl
 
+import gl51.movie.data.Movie
 import io.micronaut.test.annotation.MicronautTest
 import spock.lang.Specification
 
@@ -22,8 +23,10 @@ class MovieRegistryImplTest extends Specification {
     }
 
     void "adding a favorite should fill in the database"() {
+        Movie movie = new Movie()
+        movie.setImdbID("test");
         when:
-            registry.addMovieToFavorites("test")
+            registry.addMovieToFavorites(movie)
         then:
             registry.listFavorites().size() == 1
     }
