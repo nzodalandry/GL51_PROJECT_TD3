@@ -11,7 +11,7 @@ interface MovieRegistry {
      * adds a film to favorites
      * @param imdbID the id of the film
      */
-    void addMovieToFavorites(String imdbID)
+    void addMovieToFavorites(Movie movie)
 
     /**
      * return a list of my movies with their details

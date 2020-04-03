@@ -11,8 +11,8 @@ class MovieRegistryImpl implements MovieRegistry {
     private List<Movie> internalRegistry = []
 
     @Override
-    void addMovieToFavorites(String imdbID) {
-        internalRegistry << new Movie(imdbID: imdbID)
+    void addMovieToFavorites(Movie movie) {
+        internalRegistry << movie
     }
 
     @Override
